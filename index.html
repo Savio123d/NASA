@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmoContos: Aventuras no Clima Espacial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Adicionando a biblioteca de animação AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c1445;
+            color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9h-1v-9h-9v9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5zm-1 90h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-9-10v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm9-10h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-9-10v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm9-10h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-9-10v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm9-10h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-10 0h9v-9h-9v9zm-9-10v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9zm10 0v-9h9v9h-9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        /* Estilos para o Modal */
+        .modal-overlay {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Cabeçalho -->
+    <header class="p-4 fixed w-full z-20 glassmorphism">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-black tracking-tighter text-white">
+                <a href="#">Cosmo<span class="text-amber-400">Contos</span></a>
+            </h1>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#sobre" class="hover:text-amber-400 transition-colors">Sobre</a>
+                <a href="#personagens" class="hover:text-amber-400 transition-colors">Personagens</a>
+                <a href="#historias" class="hover:text-amber-400 transition-colors">Histórias</a>
+                <a href="#observatorio" class="hover:text-amber-400 transition-colors">Observatório</a>
+                <a href="#recursos" class="hover:text-amber-400 transition-colors">Recursos</a>
+            </div>
+            <button id="menu-btn" class="md:hidden flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </nav>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full glassmorphism">
+            <a href="#sobre" class="block text-center p-4 hover:bg-white/10">Sobre</a>
+            <a href="#personagens" class="block text-center p-4 hover:bg-white/10">Personagens</a>
+            <a href="#historias" class="block text-center p-4 hover:bg-white/10">Histórias</a>
+            <a href="#observatorio" class="block text-center p-4 hover:bg-white/10">Observatório</a>
+            <a href="#recursos" class="block text-center p-4 hover:bg-white/10">Recursos</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Principal (Hero) -->
+        <section class="min-h-screen flex items-center justify-center pt-20 px-4">
+            <div class="text-center max-w-3xl">
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-shadow-lg" data-aos="fade-down">Traduza os segredos do universo em aventuras!</h2>
+                <p class="text-lg md:text-xl mb-8 text-slate-300" data-aos="fade-up" data-aos-delay="200">CosmoContos transforma a ciência complexa do clima espacial em histórias cativantes e interativas para crianças, inspirando a próxima geração de cientistas e exploradores.</p>
+                <a href="#sobre" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 px-8 rounded-full text-lg transition-transform hover:scale-105 transform" data-aos="zoom-in" data-aos-delay="400">Comece a Descoberta</a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-20 px-4 overflow-hidden">
+            <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left" data-aos="fade-right">
+                    <h3 class="text-3xl md:text-4xl font-black tracking-tighter mb-4">O Problema: Um Universo Distante</h3>
+                    <p class="text-slate-300 leading-relaxed">Fenômenos como tempestades solares são abstratos e complexos para as crianças. A falta de ferramentas educativas que sejam ao mesmo tempo precisas e divertidas é uma oportunidade perdida para inspirar mentes jovens.</p>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <div class="p-8 rounded-2xl glassmorphism">
+                        <h4 class="text-2xl font-bold mb-3 text-amber-400">Nossa Solução Criativa</h4>
+                        <p class="text-slate-200">Criamos uma plataforma web que usa o poder do storytelling para "traduzir" a ciência. Transformamos uma tempestade solar em um "espirro do Sol" e o campo magnético no "escudo de força da Terra", tornando o aprendizado uma aventura inesquecível.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Personagens -->
+<section id="personagens" class="py-20 px-4 bg-white/5 overflow-hidden">
+    <div class="container mx-auto text-center">
+        <h3 class="text-3xl md:text-4xl font-black tracking-tighter mb-12" data-aos="fade-up">Conheça Nossos Heróis e Vilões Cósmicos</h3>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+            
+            <div class="flex flex-col p-8 rounded-2xl glassmorphism text-left transform hover:-translate-y-2 transition-transform" data-aos="zoom-in-up">
+                <img src="5d2a9c3f-dd85-4cb0-8bba-4b1a4be166dd.jpg" alt="Imagem do Super Necão" class="rounded-lg mb-4 w-full h-72 object-contain">
+                
+                <h4 class="text-2xl font-bold text-amber-400">Super Necão (Neco)</h4>
+                <p class="text-slate-300 mt-2">Um menino curioso e ingênuo que ama a vida no campo. Com sua capa de saco feita pela avó, ele ganha poderes especiais: pode voar, ouvir as "vozes" do sol e enxergar auroras como ninguém!</p>
+            </div>
+
+            <div class="flex flex-col p-8 rounded-2xl glassmorphism text-left transform hover:-translate-y-2 transition-transform" data-aos="zoom-in-up" data-aos-delay="200">
+                <img src="cf8feb29-2619-43be-b061-cdd659384128.jpg" alt="Imagem da Tempestão Solares" class="rounded-lg mb-4 w-full h-72 object-cover">
+
+                <h4 class="text-2xl font-bold text-red-400">Tempestão Solares</h4>
+                <p class="text-slate-300 mt-2">Uma Ejeção de Massa Coronal gigante e furiosa! Ele não é mau, apenas muito poderoso e descontrolado, causando apagões e interferências por onde passa com sua energia.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+        <!-- Seção Histórias -->
+        <section id="historias" class="py-20 px-4 overflow-hidden">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl md:text-4xl font-black tracking-tighter mb-12" data-aos="fade-up">Módulos de Aprendizagem Temáticos</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- História 1 -->
+                    <div class="p-6 rounded-2xl glassmorphism flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-red-500 w-20 h-20 rounded-full flex items-center justify-center mb-4 text-3xl font-bold">1</div>
+                        <h4 class="text-xl font-bold mb-2">A Fúria do Sol</h4>
+                        <p class="text-slate-300 text-sm mb-4">Acompanhe Super Necão em sua primeira aventura para proteger a Terra da energia de um vilão superpoderoso, o Tempestão Solares.</p>
+                        <button class="open-modal-btn mt-auto bg-amber-500/80 hover:bg-amber-500 text-slate-900 font-bold py-2 px-4 rounded-full text-sm transition-colors" data-story-title="A Fúria do Sol" data-story-content="Tudo começa quando o rádio do pai de Neco para de funcionar e as luzes do vilarejo começam a piscar. Um som estranho vem do céu, e Neco se transforma no Super Necão para investigar a fúria do Sol!">Ler um trecho</button>
+                    </div>
+                     <!-- História 2 -->
+                    <div class="p-6 rounded-2xl glassmorphism flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-amber-500 w-20 h-20 rounded-full flex items-center justify-center mb-4 text-3xl font-bold">2</div>
+                        <h4 class="text-xl font-bold mb-2">O Dia em que o Sol Espirrou</h4>
+                        <p class="text-slate-300 text-sm mb-4">Descubra o que acontece quando o Sol solta um "espirro" gigante e como isso afeta a Terra e seus habitantes.</p>
+                        <button class="open-modal-btn mt-auto bg-amber-500/80 hover:bg-amber-500 text-slate-900 font-bold py-2 px-4 rounded-full text-sm transition-colors" data-story-title="O Dia em que o Sol Espirrou" data-story-content="Super Necão estava cuidando de suas galinhas quando ouviu uma voz vinda do céu. 'Aaa... aaaa... ATCHIM!', parecia dizer o Sol. De repente, uma onda de energia colorida viajou pelo espaço. Era Cori, a Ejeção de Massa Coronal, vindo em direção à Terra!">Ler um trecho</button>
+                    </div>
+                     <!-- História 3 -->
+                    <div class="p-6 rounded-2xl glassmorphism flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-sky-500 w-20 h-20 rounded-full flex items-center justify-center mb-4 text-3xl font-bold">3</div>
+                        <h4 class="text-xl font-bold mb-2">O Vento Invisível</h4>
+                        <p class="text-slate-300 text-sm mb-4">Explore o mistério do Vento Solar, uma força invisível que viaja pelo espaço e cria fenômenos incríveis como as auroras.</p>
+                        <button class="open-modal-btn mt-auto bg-amber-500/80 hover:bg-amber-500 text-slate-900 font-bold py-2 px-4 rounded-full text-sm transition-colors" data-story-title="O Vento Invisível" data-story-content="Além dos grandes espirros, o Sol sopra constantemente um ventinho invisível. Super Necão aprende que esse Vento Solar é como um riozinho de partículas que, ao encontrar o escudo de força da Terra, cria um show de luzes mágicas no céu: as auroras!">Ler um trecho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: Observatório -->
+        <section id="observatorio" class="py-20 px-4 bg-white/5 overflow-hidden">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl md:text-4xl font-black tracking-tighter mb-4" data-aos="fade-up">Observatório do Super Necão</h3>
+                <p class="text-slate-300 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Aqui vemos o que o Sol está aprontando agora mesmo! (Dados simulados para diversão)</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Card Vento Solar -->
+                    <div class="p-6 rounded-2xl glassmorphism" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="text-lg font-bold text-sky-400 mb-2">Velocidade do Vento Solar</h4>
+                        <p class="text-5xl font-black tracking-tighter"><span id="solar-wind-speed">450</span> km/s</p>
+                        <p class="text-slate-400 mt-2">Um ventinho rápido hoje!</p>
+                    </div>
+                    <!-- Card Atividade Solar -->
+                    <div class="p-6 rounded-2xl glassmorphism" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="text-lg font-bold text-amber-400 mb-2">Atividade Solar</h4>
+                        <p class="text-5xl font-black tracking-tighter" id="solar-activity">Calma</p>
+                        <p class="text-slate-400 mt-2">O Sol está bem tranquilo.</p>
+                    </div>
+                    <!-- Card Chance de Aurora -->
+                    <div class="p-6 rounded-2xl glassmorphism" data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="text-lg font-bold text-emerald-400 mb-2">Chance de Aurora</h4>
+                        <p class="text-5xl font-black tracking-tighter"><span id="aurora-chance">15</span>%</p>
+                        <p class="text-slate-400 mt-2">Baixa chance de ver luzes mágicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Recursos Interativos -->
+        <section id="recursos" class="py-20 px-4 overflow-hidden">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl md:text-4xl font-black tracking-tighter mb-12" data-aos="fade-up">Interatividade e Gamificação</h3>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                        <svg class="w-16 h-16 mx-auto text-amber-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h4 class="text-xl font-bold">Animações Simples</h4>
+                        <p class="text-slate-300 mt-2">Ilustrações que dão vida aos conceitos científicos, mostrando como os fenômenos espaciais acontecem.</p>
+                    </div>
+                    <div class="p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                        <svg class="w-16 h-16 mx-auto text-amber-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                        <h4 class="text-xl font-bold">Minigames Educativos</h4>
+                        <p class="text-slate-300 mt-2">Jogos rápidos ao final de cada capítulo para testar o conhecimento de forma divertida e engajante.</p>
+                    </div>
+                    <div class="p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                        <svg class="w-16 h-16 mx-auto text-amber-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                        <h4 class="text-xl font-bold">Diário de Bordo Cósmico</h4>
+                        <p class="text-slate-300 mt-2">Um sistema de recompensas com adesivos virtuais para colecionar a cada conceito aprendido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="py-8 px-4 border-t border-white/10">
+        <div class="container mx-auto text-center text-slate-400">
+            <p>&copy; 2025 CosmoContos. Uma jornada de descoberta para jovens Guardiões da Terra.</p>
+        </div>
+    </footer>
+
+    <!-- ESTRUTURA DO MODAL (invisível por padrão) -->
+    <div id="story-modal" class="modal-overlay fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-30 opacity-0 pointer-events-none">
+        <div class="modal-content glassmorphism rounded-2xl p-8 max-w-lg w-full text-center transform scale-95">
+            <h3 id="modal-title" class="text-2xl font-bold text-amber-400 mb-4"></h3>
+            <p id="modal-content" class="text-slate-200 mb-6"></p>
+            <button id="modal-close-btn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-full transition-colors">Fechar</button>
+        </div>
+    </div>
+
+
+    <!-- Adicionando o script da biblioteca de animação AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa a biblioteca de animações
+        AOS.init({
+            duration: 800, // Duração da animação
+            once: true, // Animação acontece apenas uma vez
+        });
+        
+        // --- Script para menu mobile e scroll suave ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // --- Lógica para o Modal de Histórias ---
+        const storyModal = document.getElementById('story-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const openModalBtns = document.querySelectorAll('.open-modal-btn');
+
+        const openModal = (title, content) => {
+            modalTitle.textContent = title;
+            modalContent.textContent = content;
+            storyModal.classList.remove('opacity-0', 'pointer-events-none');
+            storyModal.querySelector('.modal-content').classList.remove('scale-95');
+        };
+
+        const closeModal = () => {
+            storyModal.classList.add('opacity-0', 'pointer-events-none');
+            storyModal.querySelector('.modal-content').classList.add('scale-95');
+        };
+
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const title = btn.dataset.storyTitle;
+                const content = btn.dataset.storyContent;
+                openModal(title, content);
+            });
+        });
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        storyModal.addEventListener('click', (e) => {
+            // Fecha o modal se clicar fora da área de conteúdo
+            if (e.target === storyModal) {
+                closeModal();
+            }
+        });
+
+        // --- Simulação de dados para o Observatório ---
+        const solarWindSpeedEl = document.getElementById('solar-wind-speed');
+        const solarActivityEl = document.getElementById('solar-activity');
+        const auroraChanceEl = document.getElementById('aurora-chance');
+
+        if (solarWindSpeedEl) {
+            setInterval(() => {
+                // Simula variação da velocidade do vento solar
+                const randomSpeed = 300 + Math.floor(Math.random() * 300);
+                solarWindSpeedEl.textContent = randomSpeed;
+
+                // Simula mudança na atividade solar
+                const activities = ['Calma', 'Moderada', 'Ativa', 'Forte'];
+                const randomActivity = activities[Math.floor(Math.random() * activities.length)];
+                solarActivityEl.textContent = randomActivity;
+
+                // Simula chance de aurora
+                const randomChance = Math.floor(Math.random() * 40);
+                auroraChanceEl.textContent = randomChance;
+
+            }, 4000); // Atualiza a cada 4 segundos
+        }
+
+    </script>
+</body>
+</html>
